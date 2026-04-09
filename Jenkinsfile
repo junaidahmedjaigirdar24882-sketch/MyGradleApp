@@ -25,7 +25,7 @@ pipeline {
 
         stage('Run Application') {
             steps {
-                sh 'java -jar build/libs/MyGradleApp-1.0-SNAPSHOT.jar'
+                sh 'java -jar build/libs/*.jar'
             }
         }
     }
