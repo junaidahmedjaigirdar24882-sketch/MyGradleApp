@@ -3,15 +3,14 @@ pipeline {
 
     tools {
         gradle 'Gradle'
+        git 'Default'
     }
     stages {
-
         stage('Checkout') {
             steps {
-                git branch: 'master', url: 'https://github.com/junaidahmedjagiridar24882-sketch/MyGradleApp.git'
+                git branch: 'master', url: 'https://github.com/junaidahmedjaigirdar24882-sketch/MyGradleApp.git'
             }
         }
-
         stage('Build') {
             steps {
                 sh 'gradle build'
@@ -30,6 +29,7 @@ pipeline {
             }
         }
     }
+
     post {
         success {
             echo 'Build successful!'
