@@ -40,3 +40,10 @@ doLast{
 println 'Good Morning Everyone, have a nice day'
 }
 }
+jar {
+    manifest {
+        attributes(
+            'Main-Class': 'App'
+        )
+    }
+}
